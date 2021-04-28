@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="us-ascii">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<p></p>
+
+<link rel="stylesheet" href="https://asintranet.info/Navbar/navbar.css">
+<div id = "divNavbar"></div>
+<script src = "https://asintranet.info/Navbar/navbar.js"></script>
+
+<strong><center><span style="font-size: 36px;">FilterQuote Helper</span></center></strong>
+
+<div id = "divCalculate">
+    <button id = "btnCalculate" onclick = "summateCosts()">Generate Quote</button><br>
+    Apply Michele's UK Formula (Multiply cost by 10%, add $30 for labor.)<input type = "checkbox" id = "ckbxUK">
+</div>
+<div id = "divDimensions"></div>
+<div id = "divOptions"></div>
+
+<div id = "divPanelCountInputs">
+<label class = "left"> Small Panels</label>
+<input type = "number" id = "inpSmallPanels" value = 4> 
+<br>
+<label class = "left"> Medium Panels</label>
+<input type = "number" id = "inpMediumPanels" value = 4> 
+<br>
+<label class = "left"> Long Panels</label>
+<input type = "number" id = "inpLongPanels" value = 2> 
+<br>
+</div>
+
+<div id = "divRadioPlastic" class = "left">
+    Plastic:<br>
+    <label for="1/4ths">1/4"(6.35mm)</label>
+    <input type="radio" id="huey" name="drone" value="1/4" checked>
+  
+    <br>
+    <label for="3/8ths">3/8"(9.525mm)</label>
+    <input type="radio" id="dewey" name="drone" value="3/8">
+  
+</div>
+<div class = "left">
+
+</div>
+<br><br><br><br>
+<div id = "divCarbons"><span style="margin-left:5%">Carbons:</span></div>
+
+<div id = "divPieceSizes">
+    <br><label class = "left">Log:</label>
+        <label class = "right" id = "lblPanelCalcErrors"></label>
+    
+    <br><label class = "left">Short Panel Cut Length: </label>
+        <label class = "right" id = "lblShortPanelLength"></label>
+    
+    <br><label class = "left">Med Panel Cut Length: </label>
+        <label class = "right" id = "lblMediumPanelLength"></label>
+    
+    <br><label class = "left">Long Panel Cut Length: </label>
+        <label class = "right" id = "lblLongPanelLength"></label>
+        
+    <br><label class = "left">Carbon Filter Volume: </label>
+        <label class = "right" id = "lblVolumeOfCarbon"></label>
+    
+    <br><label class = "left">Approx. Weight: </label>
+        <label class = "right" id = "lblFilterWeight"></label>
+    
+    <br><label class = "left">Open Face Area: </label>
+        <label class = "right" id = "lblOpenFaceArea"></label>
+    
+</div>
+<br>
+<div id = "divQuote" style = "font-size:30px" class = "absolute-final">
+    Cost To Produce $<span id = "spanQuote">0.00</span> (no labor without UK formula)
+    <br>
+    Filter is <span id = "spanRelativeToASTS"></span> times the size of an ASTS filter.
+</div>
+
+
+<script src="quoter.js"></script>
+
+</body>
+</html>
